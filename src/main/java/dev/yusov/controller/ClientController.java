@@ -67,10 +67,13 @@ public class ClientController {
                 : new ResponseEntity<Object>(HttpStatus.NOT_MODIFIED);
     }
 
+    // Метод обрабатывает POST запросы на адрес /getBody
     @PostMapping(value = "/getBody")
     public ResponseEntity<String> create(@RequestBody String body) {
 
         String client = clientService.getXML(body);
+
+        System.out.println("Пришло сообщение: " + body);
 
         return client != null
                 ? new ResponseEntity<String>(client, HttpStatus.OK)
@@ -86,8 +89,6 @@ public class ClientController {
                 ? new ResponseEntity<String>(client, HttpStatus.OK)
                 : new ResponseEntity<String>(HttpStatus.NOT_FOUND);
     }
-
-
 
     // @RequestParam - отвечает за параметры запроса, они находятся после знака ?
     @PostMapping(value = "/sbpo-module/v1/subsidiary/clients")

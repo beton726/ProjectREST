@@ -73,7 +73,7 @@ public class ClientServiceImpl implements ClientService {
 
         System.out.println("Изменяем: " + xml);
         StringBuffer stringBuffer = new StringBuffer();
-        stringBuffer.append("Изменяем: " + xml);
+        stringBuffer.append("Что то изменили в XML." + xml);
         return stringBuffer.toString();
     }
 

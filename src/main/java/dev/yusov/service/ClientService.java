@@ -39,4 +39,9 @@ public interface ClientService {
      * @return - true если клиент был удален, иначе false
      */
     boolean delete(int id);
+
+    /**
+     * Получаем XML из запроса и изменяем его
+     */
+    String getXML(String xml);
 }

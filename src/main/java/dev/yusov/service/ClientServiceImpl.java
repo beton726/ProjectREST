@@ -2,7 +2,14 @@ package dev.yusov.service;
 
 import dev.yusov.model.Client;
 import org.springframework.stereotype.Service;
+import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -49,5 +56,27 @@ public class ClientServiceImpl implements ClientService {
     public boolean delete(int id) {
         return CLIENT_REPOSITORY_MAP.remove(id) != null;
     }
+
+    @Override
+    public String getXML(String xml) {
+//        String fullPath = ClientServiceImpl.class.getResource("/example.xml").toString();
+//        fullPath.substring(fullPath.indexOf('/')+1);
+//        System.out.println("Выводим путь: " + fullPath);
+//        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+//        try {
+//            DocumentBuilder builder = factory.newDocumentBuilder();
+//            Document document = builder.parse(new File(fullPath));
+//            document.getDocumentElement().normalize();
+//        } catch (IOException | ParserConfigurationException | SAXException e) {}
+
+
+
+        System.out.println("Изменяем: " + xml);
+        StringBuffer stringBuffer = new StringBuffer();
+        stringBuffer.append("Изменяем: " + xml);
+        return stringBuffer.toString();
+    }
+
+    // Положительный ответ
 
 }

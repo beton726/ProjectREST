@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns:Request xmlns:ns="http://www.tempuri.org/types">
+    <Version>V1.1</Version>
+    <Address>
+        <Index>...</Index>
+        <Country>...</Country>
+        <City>...</City>
+        <Status>OK</Status>
+    </Address>
+</ns:Request>
